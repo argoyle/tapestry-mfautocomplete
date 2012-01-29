@@ -101,14 +101,14 @@ public class MultifieldAutocompleteTest {
         this.request.addParameter("t:input", "abc");
 
         this.resources.setEventResult(Arrays.asList(new ResultPOJO("aaa", 0.0, 2.2),
-                new ResultPOJO("ccc", 7.5, 1.1)));
+                new ResultPOJO("ccc", 7.5, 1.1), new ResultPOJO("bbb", null, null)));
 
         final TextStreamResponse result = (TextStreamResponse) this.autocomplete.onAutocomplete();
         final byte[] buff = new byte[1024];
         final int readBytes = result.getStream().read(buff);
         assertEquals(
                 "response",
-                "<ul><li field2=\"0.0\" field1=\"aaa\">aaa-0.0</li><li field2=\"7.5\" field1=\"ccc\">ccc-7.5</li></ul>",
+                "<ul><li field2=\"0.0\" field1=\"aaa\">aaa-0.0</li><li field2=\"7.5\" field1=\"ccc\">ccc-7.5</li><li field1=\"bbb\">bbb-null</li></ul>",
                 new String(buff, 0, readBytes));
     }
 
