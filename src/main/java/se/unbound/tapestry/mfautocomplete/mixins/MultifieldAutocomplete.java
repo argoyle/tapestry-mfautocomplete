@@ -169,8 +169,8 @@ public class MultifieldAutocomplete {
             }
         }
 
-        config.put("afterUpdateElement", new JSONLiteral("function(field, item) { \n" + id
-                + ".multifieldautocompleter.updateFields(field, item);\n}"));
+        config.put("afterUpdateElement", new JSONLiteral("function(field, item) { \n$(" + id
+                + ").multifieldautocompleter.updateFields(field, item);\n}"));
 
         // Let subclasses do more.
         this.configure(config);

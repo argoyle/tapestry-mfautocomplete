@@ -79,7 +79,7 @@ public class MultifieldAutocompleteTest {
                         + "new MultifieldAutocomplete('field', new Ajax.Autocompleter('field', 'field:menu', 'autocomplete', {\n"
                         + "  \"indicator\" : \"field:loader\",\n"
                         + "  \"afterUpdateElement\" : function(field, item) { \n"
-                        + "field.multifieldautocompleter.updateFields(field, item);\n"
+                        + "$(field).multifieldautocompleter.updateFields(field, item);\n"
                         + "},\n"
                         + "  \"paramName\" : \"t:input\"\n"
                         + "}), 'field1,field2', 'null');");
@@ -155,7 +155,7 @@ public class MultifieldAutocompleteTest {
                         + "  \"minChars\" : 3,\n"
                         + "  \"indicator\" : \"field:loader\",\n"
                         + "  \"afterUpdateElement\" : function(field, item) { \n"
-                        + "field.multifieldautocompleter.updateFields(field, item);\n"
+                        + "$(field).multifieldautocompleter.updateFields(field, item);\n"
                         + "},\n"
                         + "  \"paramName\" : \"t:input\"\n"
                         + "}), 'field1,field2', 'null');");
@@ -171,7 +171,7 @@ public class MultifieldAutocompleteTest {
                         + "new MultifieldAutocomplete('field', new Ajax.Autocompleter('field', 'field:menu', 'autocomplete', {\n"
                         + "  \"indicator\" : \"field:loader\",\n"
                         + "  \"afterUpdateElement\" : function(field, item) { \n"
-                        + "field.multifieldautocompleter.updateFields(field, item);\n"
+                        + "$(field).multifieldautocompleter.updateFields(field, item);\n"
                         + "},\n"
                         + "  \"frequency\" : 0.25,\n"
                         + "  \"paramName\" : \"t:input\"\n"
@@ -193,7 +193,7 @@ public class MultifieldAutocompleteTest {
                         "    \"c\"\n" +
                         "  ],\n" +
                         "  \"afterUpdateElement\" : function(field, item) { \n" +
-                        "field.multifieldautocompleter.updateFields(field, item);\n" +
+                        "$(field).multifieldautocompleter.updateFields(field, item);\n" +
                         "},\n" +
                         "  \"paramName\" : \"t:input\"\n" +
                         "}), 'field1,field2', 'null');");
